@@ -1,5 +1,7 @@
 package com.formation.ddd.domain.model;
 
+import com.formation.ddd.domain.enums.TagEnum;
+import com.formation.ddd.domain.enums.ValidationEnum;
 import lombok.Getter;
 
 import java.time.LocalDateTime;
@@ -11,7 +13,7 @@ public class Review {
 
     private String comment;
 
-    private int rating;
+    private Rating rating;
 
     private int countReport;
 
@@ -19,45 +21,45 @@ public class Review {
 
     private LocalDateTime createdAt;
 
-    private boolean isTagged;
+    private TagEnum isTagged;
 
     private boolean isNotificationSent;
 
-    private Boolean isValidated;
+    private ValidationEnum isValidated;
 
     private Review() {
     }
 
-    public static Review publish(Long id, String comment, int rating, Author author) {
+    public static Review publish(Long id, String comment, Rating rating, Author author) {
         Review review = new Review();
         review.id = id;
         review.comment = comment;
         review.rating = rating;
         review.countReport = 0;
         review.author = author;
-        review.isTagged = false;
-        review.isValidated = null;
+        review.isTagged = TagEnum.UnTagged;
+        review.isValidated = ValidationEnum.Undefined;
         review.createdAt = LocalDateTime.parse("2026-06-23T14:35:12");
         review.isNotificationSent = false;
         return review;
     }
 
     public void tag() {
-        this.isTagged = true;
+        this.isTagged = TagEnum.Tagged;
     }
 
     public void validate() {
-        this.isValidated = true;
+        this.isValidated = ValidationEnum.IsValidated;
     }
 
     public void invalidate() {
-        this.isValidated = false;
+        this.isValidated = ValidationEnum.IsNotValidated;
     }
 
-    public void sendNotification() {
-        if (this.isValidated != null && this.isValidated) {
-            this.isNotificationSent = true;
-        }
-    }
+//    public void sendNotification() {
+//        if (this.isValidated == ValidationEnum.IsValidated) {
+//            this.isNotificationSent = true;
+//        }
+//    }
 
 }
