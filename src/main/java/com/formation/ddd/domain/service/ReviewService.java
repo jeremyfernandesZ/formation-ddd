@@ -1,8 +1,9 @@
 package com.formation.ddd.domain.service;
 
-import com.formation.ddd.domain.model.Review;
+import com.formation.ddd.domain.model.Author;
+import com.formation.ddd.domain.model.Rating;
 
 
 public interface ReviewService {
-      void sendNotification(Review review);
+    void publishReview(String comment, Rating rating, Author author);
 }
