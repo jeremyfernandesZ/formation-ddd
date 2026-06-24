@@ -1,7 +1,7 @@
-package com.formation.ddd.domain.model;
+package com.formation.ddd.review.domain.model;
 
-import com.formation.ddd.domain.enums.TagEnum;
-import com.formation.ddd.domain.enums.ValidationEnum;
+import com.formation.ddd.review.domain.enums.TagEnum;
+import com.formation.ddd.review.domain.enums.ValidationEnum;
 import lombok.Getter;
 
 import java.time.LocalDateTime;

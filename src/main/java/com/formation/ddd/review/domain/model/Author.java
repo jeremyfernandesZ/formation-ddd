@@ -1,4 +1,4 @@
-package com.formation.ddd.domain.model;
+package com.formation.ddd.review.domain.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

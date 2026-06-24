@@ -1,12 +1,12 @@
-package com.formation.ddd.domain.model;
+package com.formation.ddd.review.domain.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 
 @Getter
 @AllArgsConstructor
 public class Notification {
-    private Long id;;
+    private Long id;
+    ;
     private String message;
 }

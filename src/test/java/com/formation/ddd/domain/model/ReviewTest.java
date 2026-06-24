@@ -1,7 +1,10 @@
 package com.formation.ddd.domain.model;
 
-import com.formation.ddd.domain.enums.TagEnum;
-import com.formation.ddd.domain.enums.ValidationEnum;
+import com.formation.ddd.review.domain.enums.TagEnum;
+import com.formation.ddd.review.domain.enums.ValidationEnum;
+import com.formation.ddd.review.domain.model.Author;
+import com.formation.ddd.review.domain.model.Rating;
+import com.formation.ddd.review.domain.model.Review;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

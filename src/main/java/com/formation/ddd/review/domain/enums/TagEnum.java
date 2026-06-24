@@ -1,4 +1,4 @@
-package com.formation.ddd.domain.enums;
+package com.formation.ddd.review.domain.enums;
 
 public enum TagEnum {
     Tagged,

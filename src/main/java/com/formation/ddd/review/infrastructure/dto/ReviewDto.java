@@ -1,6 +1,6 @@
-package com.formation.ddd.infrastructure.dto;
+package com.formation.ddd.review.infrastructure.dto;
 
-import com.formation.ddd.domain.model.Author;
+import com.formation.ddd.review.domain.model.Author;
 
 
 public record ReviewDto(String comment,
