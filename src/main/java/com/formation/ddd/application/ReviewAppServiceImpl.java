@@ -1,5 +1,6 @@
 package com.formation.ddd.application;
 
+import com.formation.ddd.domain.model.Rating;
 import com.formation.ddd.domain.service.ReviewService;
 import com.formation.ddd.infrastructure.dto.ReviewDto;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,6 @@ public class ReviewAppServiceImpl implements ReviewAppService {
     private ReviewService reviewService;
 
     public void publishReview(ReviewDto review) {
-        reviewService.publishReview(review.comment(), review.rating(), review.author());
+        reviewService.publishReview(review.comment(), new Rating(review.rating()), review.author());
     }
 }
