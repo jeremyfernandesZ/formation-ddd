@@ -14,7 +14,7 @@ public class ModerationAppServiceImpl {
 
     public ModerationAppServiceImpl() {
         this.reviewMap = new HashMap<>();
-        this.reviewMap.put(1L, List.of(new Moderation("Inappropriate content"), new Moderation("Spam")));
+        this.reviewMap.put(0L, List.of(new Moderation("Inappropriate content"), new Moderation("Spam")));
     }
 
     public void deleteModeration(ReviewId id) {
